@@ -7,7 +7,11 @@ const blog = defineCollection({
     featuredImage: z.string().optional(),
     publishDate: z.string(),
     publish: z.boolean().default(true),
-    categories: z.array(z.string()).optional(),
+    categories: z.array(
+      z.enum([
+        '大模型', '智能体', '数据标注'
+      ])
+    ).optional(),
     seo: z.object({
       title: z.string(),
       description: z.string(),

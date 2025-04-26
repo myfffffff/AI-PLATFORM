@@ -5,23 +5,15 @@ interface Props {
 
 const { date } = Astro.props;
 
-// Ensure we're working with a Date object
+// 兼容字符串、数字、Date
 const dateObj = new (Date as DateConstructor)(date instanceof Date ? date.getTime() : date);
 
-// Validate the date
 if (isNaN(dateObj.getTime())) {
     throw new Error('Invalid date provided to Date component');
 }
 
-const formattedDate = dateObj.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-}).replace(/(\d+)(?=(,))/, (match: string) => {
-    const day = parseInt(match);
-    const suffix = ['th', 'st', 'nd', 'rd'][(day % 10 > 3 || day > 20) ? 0 : day % 10];
-    return day + suffix;
-});
+// 格式化为“2021年4月”格式
+const formattedDate = `${dateObj.getFullYear()}年${dateObj.getMonth() + 1}月`;
 ---
 
 <time datetime={dateObj.toISOString()} class="text-sm text-body-base">
