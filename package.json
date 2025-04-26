@@ -11,6 +11,7 @@
         "astro": "astro"
     },
     "dependencies": {
+        "@astrojs/mdx": "^4.2.5",
         "@astrojs/prefetch": "^0.4.1",
         "aos": "^2.3.4"
     },

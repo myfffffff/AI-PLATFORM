@@ -13,7 +13,6 @@ import Faqs from '@components/sections/Faqs.astro';
 import { faqLists } from '@data/faqs';
 import RecentPosts from '@components/sections/RecentPosts.astro';
 import heroImage from '../assets/images/home/default-hero-2.jpg';
-import styleGuideImage from '../assets/images/home/developer.jpg';
 
 const seoTitle = "现代化、高性能的人工智能平台";
 const seoDescription = "一个现代化、高性能的人工智能平台，为开发者提供完整的解决方案。";
@@ -59,23 +58,6 @@ const FooterCta = {
         link: 'https://github.com/rspisarski/titan-core',
         target: '_blank'
     }
-}
-
-const styleGuideSection = {
-    eyebrow: "设计系统",
-    headline: "统一美观的组件库",
-    description: "我们提供完整的设计系统，确保您的项目保持视觉一致性。从排版到交互元素，每个组件都经过精心设计。",
-    image: {
-        src: styleGuideImage,
-        alt: "特色图片"
-    },
-    buttons: [
-        {
-            text: "浏览样式指南",
-            link: "/style-guide",
-            variant: "primary" as const
-        }
-    ]
 }
 
 const sideBySideStats = {
@@ -135,7 +117,6 @@ const recentPostsSection = {
     <Hero content={heroContent} />
     <Features content={featuresSection} padding="base" background="light" />
     <RecentPosts content={recentPostsSection} background="base" padding="base" postsToShow={3} category="Theme Usage"/>
-    <SplitPanel content={styleGuideSection} imagePosition="right" background="light" padding="base" />
     <CtaBanner content={mainCta} variant="contained" background="light" paddingBottom="base" />
     <Logos content={logosSection} background="base" padding='small'/>
     <Stats content={sideBySideStats} background='dark' padding="base"/>
