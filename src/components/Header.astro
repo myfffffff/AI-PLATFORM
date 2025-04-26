@@ -34,6 +34,7 @@ const isCurrentPage = (link: string) => {
                                 <div class="flex items-center gap-1">
                                     <a
                                         href={item.link}
+                                        data-astro-prefetch="hover"
                                         class:list={[
                                             'text-small font-medium rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-nav-text-active',
                                             isCurrentPage(item.link)
@@ -71,6 +72,7 @@ const isCurrentPage = (link: string) => {
                                             <li>
                                                 <a
                                                     href={child.link}
+                                                    data-astro-prefetch="hover"
                                                     class:list={[
                                                         'block px-4 text-small py-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-nav-text-active',
                                                         isCurrentPage(child.link)
@@ -90,7 +92,7 @@ const isCurrentPage = (link: string) => {
                     }
                 </ul>
 
-                <Button href={ctaButton.link} variant="primary">{ctaButton.name}</Button>
+                <Button href={ctaButton.link} data-astro-prefetch="hover" variant="primary">{ctaButton.name}</Button>
 
                 {/* Mobile Menu Button */}
                 <button
@@ -118,6 +120,7 @@ const isCurrentPage = (link: string) => {
                                         <div class="flex items-center justify-between">
                                             <a
                                                 href={item.link}
+                                                data-astro-prefetch="hover"
                                                 class:list={[
                                                     'py-1 rounded-md focus:outline-none focus:ring-2 focus:ring-nav-mobile-text-active',
                                                     isCurrentPage(item.link)
@@ -152,6 +155,7 @@ const isCurrentPage = (link: string) => {
                                                     <li role="none">
                                                         <a
                                                             href={child.link}
+                                                            data-astro-prefetch="hover"
                                                             class:list={[
                                                                 'block py-1 rounded-md focus:outline-none focus:ring-2 focus:ring-nav-mobile-text-active',
                                                                 isCurrentPage(child.link)
@@ -177,7 +181,7 @@ const isCurrentPage = (link: string) => {
 
                     {/* Updated mobile CTA button styling */}
                     <div class="mt-8 pb-8">
-                        <Button href={ctaButton.link} variant="ghostLight">{ctaButton.name} </Button>
+                        <Button href={ctaButton.link} data-astro-prefetch="hover" variant="ghostLight">{ctaButton.name}</Button>
                     </div>
                 </div>
             </nav>

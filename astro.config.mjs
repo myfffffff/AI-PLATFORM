@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-
 import sitemap from '@astrojs/sitemap';
 
 // Get the site URL from environment variable or use a default for local development
@@ -8,6 +7,11 @@ const site = process.env.PUBLIC_SITE_URL || 'http://localhost:4321';
 
 export default defineConfig({
   site,
+  prefetch: {
+    prefetchAll: false, // 只预取带有 data-astro-prefetch 属性的链接
+    defaultStrategy: 'hover', // 默认在悬停时预取
+    throttle: 3, // 限制同时预取的数量
+  },
   vite: {
     plugins: [tailwindcss()],
     css: {
