@@ -1,12 +1,12 @@
 export const siteConfig = {
-  companyName: 'Titan Core',
-  siteUrl: 'https://titan-core.com',
+  companyName: 'AI PLATFORM',
+  siteUrl: 'https://github.com/myfffffff/AI-PLATFORM',
   Socials: {
       xSocial: 'https://x.com/astrodotbuild',
-      Github: 'https://github.com/withastro',
+      Github: 'https://github.com/myfffffff',
       Instagram: 'https://www.instagram.com/astrodotbuild',
       LinkedIn: 'https://www.linkedin.com/company/astrodotbuild',
-      Email: 'support@titan-core.com',
+      Email: '1635069883@qq.com',
       Phone: '+123 456 7890',
       Location: '123 Main St, Anytown, USA',
   }
@@ -14,8 +14,8 @@ export const siteConfig = {
 
 export const SEO = {
   Separator: '|',
-  SiteName: 'Titan Core',
-  defaultDescription: 'A modern, high-performance Astro JS theme',
+  SiteName: 'AI PLATFORM',
+  defaultDescription: 'A modern, high-performance AI Platform',
 };
   
 export const blogSetting = {
