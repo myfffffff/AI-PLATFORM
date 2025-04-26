@@ -8,14 +8,14 @@ export const siteConfig = {
       LinkedIn: 'https://www.linkedin.com/company/astrodotbuild',
       Email: '1635069883@qq.com',
       Phone: '+123 456 7890',
-      Location: '123 Main St, Anytown, USA',
+      Location: '中国 北京',
   }
 };
 
 export const SEO = {
   Separator: '|',
   SiteName: 'AI PLATFORM',
-  defaultDescription: 'A modern, high-performance AI Platform',
+  defaultDescription: '现代化、高性能的人工智能平台',
 };
   
 export const blogSetting = {

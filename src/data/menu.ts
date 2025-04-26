@@ -1,27 +1,27 @@
 // src/data/menu.ts
 
 export const headerMenu = [
-    { name: 'Theme Info', link: '/theme-info' },
-    { name: 'Our Team', link: '/team' },
-    { name: 'Blog', link: '/blog' },
-    { name: 'Style-Guide', link: '/style-guide', showArrow: false,
+    { name: '主题信息', link: '/theme-info' },
+    { name: '团队介绍', link: '/team' },
+    { name: '博客', link: '/blog' },
+    { name: '样式指南', link: '/style-guide', showArrow: false,
         children: [
-            { name: 'Typography', link: '/style-guide#typography' },
-            { name: 'Colors', link: '/style-guide#colors' },
-            { name: 'Links', link: '/style-guide#links' },
-            { name: 'Buttons', link: '/style-guide#buttons' },
-            { name: 'Forms', link: '/style-guide#forms' },
-            { name: 'Lists', link: '/style-guide#lists' },
+            { name: '排版', link: '/style-guide#typography' },
+            { name: '颜色', link: '/style-guide#colors' },
+            { name: '链接', link: '/style-guide#links' },
+            { name: '按钮', link: '/style-guide#buttons' },
+            { name: '表单', link: '/style-guide#forms' },
+            { name: '列表', link: '/style-guide#lists' },
         ]
     }
 ];
 
 export const footerMenu = [
-    { name: 'Style Guide', link: '/style-guide' },
+    { name: '样式指南', link: '/style-guide' },
 ];
 
 export const legalMenu = [
-    { name: 'Privacy Policy', link: '/legal/privacy-policy' },
-    { name: 'Terms of Service', link: '/legal/terms-of-service' }
+    { name: '隐私政策', link: '/legal/privacy-policy' },
+    { name: '服务条款', link: '/legal/terms-of-service' }
 ];
 

@@ -15,20 +15,20 @@ import RecentPosts from '@components/sections/RecentPosts.astro';
 import heroImage from '../assets/images/home/default-hero-2.jpg';
 import styleGuideImage from '../assets/images/home/developer.jpg';
 
-const seoTitle = "Modern, High-Performance Astro Theme";
-const seoDescription = "A modern, high-performance Astro theme for developer portfolios and documentation sites.";
+const seoTitle = "现代化、高性能的人工智能平台";
+const seoDescription = "一个现代化、高性能的人工智能平台，为开发者提供完整的解决方案。";
 
 const heroContent = {
-    title: 'The Foundation for Beautiful Astro JS Websites',
-    description: 'Titan Core is a minimal, performance-focused Astro JS theme that serves as the perfect foundation for your next web project. Built with clean code and modern best practices, it\'s designed to be extended and customized to your specific needs.',
+    title: '为您的业务提供智能化解决方案',
+    description: 'AI PLATFORM 是一个专业的人工智能平台，为您提供全方位的智能化服务。我们的平台采用最新技术，确保高性能、可扩展性和易用性，帮助您快速实现业务智能化升级。',
     buttons: [
         {
-            text: 'Get Started',
+            text: '开始使用',
             link: '/contact',
             target: '_self'
         },
         {
-            text: 'View on GitHub',
+            text: '查看源码',
             link: 'https://github.com/rspisarski/titan-core',
             target: '_blank'
         }
@@ -38,40 +38,40 @@ const heroContent = {
 }
 
 const featuresSection = {
-    eyebrow: "CORE FEATURES",
-    title: "Everything You Need, Nothing You Don't",
-    description: "Titan Core gives you a solid foundation with essential features while staying lightweight and customizable. Start with a clean slate and build exactly what you need without the bloat.",
+    eyebrow: "核心功能",
+    title: "一站式智能化解决方案",
+    description: "我们的平台提供完整的智能化解决方案，包括但不限于自然语言处理、计算机视觉、知识图谱等多个领域，助力您的业务快速实现智能化升级。",
     features: featureLists.main.features,
     button: {
-        text: "View Theme Info",
+        text: "了解更多",
         link: "/theme-info",
         variant: "primary" as const
     }
 }
 
 const FooterCta = {
-    eyebrow: "Join The Community",
-    title: ' Start Building With Titan Core Today',
-    description: 'Titan Core is open-source and constantly improving. Join our community of developers to contribute, get support, or showcase what you\'ve built.',
+    eyebrow: "加入我们",
+    title: '立即开始使用 AI PLATFORM',
+    description: 'AI PLATFORM 是一个开源项目，我们持续改进和优化。加入我们的开发者社区，获取支持并展示您的创新应用。',
     hideCta: false,
     button: {
-        text: 'Download Titan Core',
+        text: '立即下载',
         link: 'https://github.com/rspisarski/titan-core',
         target: '_blank'
     }
 }
 
 const styleGuideSection = {
-    eyebrow: "Design System",
-    headline: "Consistent & Beautiful Components",
-    description: "Titan Core comes with a complete style guide to ensure your projects maintain visual consistency. From typography to interactive elements, we've carefully crafted each component.",
+    eyebrow: "设计系统",
+    headline: "统一美观的组件库",
+    description: "我们提供完整的设计系统，确保您的项目保持视觉一致性。从排版到交互元素，每个组件都经过精心设计。",
     image: {
         src: styleGuideImage,
-        alt: "Featured image"
+        alt: "特色图片"
     },
     buttons: [
         {
-            text: "Explore Style Guide",
+            text: "浏览样式指南",
             link: "/style-guide",
             variant: "primary" as const
         }
@@ -79,16 +79,16 @@ const styleGuideSection = {
 }
 
 const sideBySideStats = {
-    eyebrow: "Stats",
-    title: "Built for Speed and Flexibility",
-    description: "Titan Core is designed with performance and developer experience in mind. Our lightweight theme gives you all the essentials without the bloat, letting you build exactly what you need with impressive speed.",
+    eyebrow: "性能数据",
+    title: "为速度和灵活性而生",
+    description: "我们的平台专注于性能和开发体验。轻量级的设计让您能够快速构建所需的功能，同时保持出色的性能表现。",
     variant: 'side-by-side' as const,
     stats: statsLists.withContent.stats,
     content: {
-        title: "Built for Speed and Flexibility",
-        description: "Titan Core is designed with performance and developer experience in mind. Our lightweight theme gives you all the essentials without the bloat, letting you build exactly what you need with impressive speed.",
+        title: "为速度和灵活性而生",
+        description: "我们的平台专注于性能和开发体验。轻量级的设计让您能够快速构建所需的功能，同时保持出色的性能表现。",
         button: {
-            text: "Discover Titan Core",
+            text: "了解更多",
             link: "/theme-info",
             variant: "primary" as const
         }
@@ -96,37 +96,36 @@ const sideBySideStats = {
 };
 
 const mainCta = {
-    eyebrow: "Build Blocks",
-    title: "Ready-to-Use Components",
-    description: "Save development time with our pre-built, accessible components. Each one is designed to integrate seamlessly with your projects while maintaining excellent performance.",
+    eyebrow: "组件库",
+    title: "即用型组件",
+    description: "使用我们预构建的、无障碍的组件节省开发时间。每个组件都经过精心设计，可以无缝集成到您的项目中，同时保持卓越的性能。",
     button: {
-        text: "View All Components",
+        text: "查看所有组件",
         link: "/components",
         variant: "primary" as const,
         target: "_self" as const
     }
 };
 
-
 const logosSection = {
-    eyebrow: "Our Clients",
+    eyebrow: "我们的客户",
     logos: logoLists.main.logos
 }
 
 const faqsSection = {
-    eyebrow: "FAQs",
-    title: 'Frequently Asked Questions',
-    description: 'Find answers to common questions about our platform and services.',
+    eyebrow: "常见问题",
+    title: '常见问题解答',
+    description: '查找关于我们平台和服务的常见问题答案。',
     faqs: faqLists.main.faqs
 }
 
 const recentPostsSection = {
-    eyebrow: "LATEST INSIGHTS",
-    title: " Learn From Our Experience",
-    description: "Explore our latest articles on Astro JS development, theme customization tips, and web performance best practices.",
+    eyebrow: "最新洞察",
+    title: "学习我们的经验",
+    description: "探索我们关于人工智能开发、平台使用技巧和性能优化的最新文章。",
     button: {
-            text: "View All Posts",
-            link: "/blog",
+        text: "查看所有文章",
+        link: "/blog",
         variant: "primary" as const
     }
 }
