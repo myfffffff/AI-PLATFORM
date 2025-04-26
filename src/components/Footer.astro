@@ -22,11 +22,11 @@ interface Props {
 const { footerCta } = Astro.props;
 
 const defaultCta = {
-  title: "Ready to get started?",
-  description: "Join us today and transform your digital presence with our innovative solutions.",
+  title: "准备好开始了吗？",
+  description: "加入我们，使用创新的智能解决方案开启您的数字化转型之旅。",
   hideCta: false,
   button: {
-    text: "Contact Us",
+    text: "联系我们",
     link: "/contact",
     target: "_self"
   }
@@ -37,65 +37,35 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer class={`bg-black text-white pb-small ${cta.hideCta ? 'pt-large' : ''}`}>
-  <div class="site-container mx-auto px-4">
-    {!cta.hideCta && (
-      <div class="text-center border-b border-background-light mb-12 py-small">
-        <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">{cta.title}</h2>
-        <p class="text-white mb-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-          {cta.description}
-        </p>
-        <Button 
-          href={cta.button.link} 
-          variant="ghostLight"
-          size="lg"
-          data-aos="fade-up"
-          data-aos-delay="200"
-          {...(cta.button.target && { target: cta.button.target })}
-        >
-          {cta.button.text}
-        </Button>
-      </div>
-    )}
-
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-background-light">
-      <div class="col-span-1">
-        <Logo variant="footer" />
-        <p class="mt-4 text-white">
-          Empowering your digital journey with innovative solutions.
-        </p>
-      </div>
-      
-      <div class="col-span-1">
-        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-        <nav>
-          <ul class="space-y-2">
-            {footerMenu.map(item => (
-              <li><a href={item.link} class="text-body-dark hover:text-white transition-colors">{item.name}</a></li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+  {!cta.hideCta && (
+    <div class="site-container mx-auto px-4 py-24 text-center">
+      <h2 class="text-4xl font-bold mb-4">{cta.title}</h2>
+      <p class="text-lg mb-8">{cta.description}</p>
+      <Button href={cta.button.link} target={cta.button.target} variant="primary" size="lg">
+        {cta.button.text}
+      </Button>
     </div>
-
-    <div class="mt-8 flex flex-col md:flex-row justify-between items-center">
-      <div class="text-body-dark text-sm">
-        © {currentYear} {siteConfig.companyName}. All rights reserved.
-      </div>
-      
-      <nav class="mt-4 md:mt-0">
-        <ul class="flex flex-wrap gap-6">
-          {legalMenu.map(item => (
-            <li>
-              <a 
-                href={item.link} 
-                class="text-sm text-body-dark hover:text-white transition-colors"
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+  )}
+  <div class="site-container mx-auto px-4 py-8 flex flex-col md:flex-row md:justify-between items-center border-t border-white/20">
+    <div class="flex flex-col items-start mb-4 md:mb-0">
+      <Logo variant="footer" />
+      <span class="text-sm text-white/80">助力您的智能化创新之旅</span>
     </div>
+    <div class="flex flex-col items-end">
+      <span class="font-semibold mb-2">快速链接</span>
+      <ul class="flex gap-4">
+        {footerMenu.map((item) => (
+          <li><a href={item.link} class="hover:underline">{item.name}</a></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+  <div class="site-container mx-auto px-4 py-4 flex flex-col md:flex-row md:justify-between items-center border-t border-white/20">
+    <span class="text-xs text-white/60">© {currentYear} AI PLATFORM. 保留所有权利。</span>
+    <ul class="flex gap-4 mt-2 md:mt-0">
+      {legalMenu.map((item) => (
+        <li><a href={item.link} class="hover:underline">{item.name}</a></li>
+      ))}
+    </ul>
   </div>
 </footer>

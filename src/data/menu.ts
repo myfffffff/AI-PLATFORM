@@ -7,7 +7,10 @@ export const headerMenu = [
 ];
 
 export const footerMenu = [
-    // 已删除样式指南
+    { name: '首页', link: '/' },
+    { name: '案例展示', link: '/blog' },
+    { name: '知识中心', link: '/knowledge-center' },
+    { name: '团队介绍', link: '/team' }
 ];
 
 export const legalMenu = [
